@@ -1,4 +1,4 @@
-# KS6084 keyestudio DIY Electronic Building Blocks SU03 Xiaozhi English Voice Module
+# KS6084 keyestudio DIY Electronic Building Blocks Xiaozhi English Voice Module
 
 ![0](./media/0.png)
 
@@ -6,23 +6,23 @@
 
 ## Description
 
-With MUS516P6 as its main control chip, the SU03 Xiaozhi voice module is a low-cost, low-power, and small-sized offline voice recognition module that can be quickly applied to smart home devices and small household appliances, 86 boxes, toys, lamps, and so on.
+With MUS516P6 as its main control chip, the Xiaozhi voice module is a low-cost, low-power, and small-sized offline voice recognition module that can be quickly applied to smart home devices and small household appliances, 86 boxes, toys, lamps, and so on.
 
 
 
 ## Parameters
 
-- Operating voltage: **3.3V~5.5V**
-- Load: **LDO output 3.3V; The external load must not exceed150MA**
-- Power supply and standby: **500MA/60MA**
-- Hardware: **10 IO ports / 1 uart / 5 ADC / 2 PWM / 1 I2S / 1 SPI / 1 I2C**
-- Audio output: **1 MONO power amplifier output interface**
-- FLASH: **2M**
-- Speaker power: **8Ω1W**
-- Language: **English**
-- Operating temperature: **0~80℃**   
-- Dimensions: **47.73/*23.93mm**
-- Weight: **8.96g**
+- Operating voltage: 3.3V~5.5V
+- Load: LDO output 3.3V; The external load must not exceed150MA
+- Power supply and standby: 500MA/60MA
+- Hardware: 10 IO ports / 1 uart / 5 ADC / 2 PWM / 1 I2S / 1 SPI / 1 I2C
+- Audio output: 1 MONO power amplifier output interface
+- FLASH: 2M
+- Speaker power: 8Ω1W
+- Language: English
+- Operating temperature: 0~80℃   
+- Dimensions: 47.73*23.93mm
+- Weight: 8.96g
 
 
 
@@ -49,7 +49,7 @@ The following is the default firmware of the module.
 
 **Voice Recognition Commands**  
 
-| Command ID | Command Aliases (separated by `|`) | Response Message |
+| Command ID | Command Aliases | Response Message |
 |:----------:|:----------------------------------:|:----------------:|
 | 1 | turn on the table lamp|please turn on the light|
 | 2 | turn off the table lamp|please turn off the light|
@@ -111,7 +111,7 @@ The following is the default firmware of the module.
 **Voice Broadcasting Commands**  
 
 | Message ID | Command Description |
-|------------|:---------------:|
+|:----------:|:---------------:|
 | 1 | Current temperature is |
 | 2 |              degree              |
 | 3 | Current rainfall is percent |
@@ -143,7 +143,7 @@ The following table displays the GPIOs of the expansion board/development board 
 
 **Arduino IDE (Windows)**
 
-Arduino official: https://www.arduino.cc/
+Arduino official:https://www.arduino.cc/en/software/#ide
 
 Download the latest version of the arduino. After entering the website, as shown below:
 
@@ -210,20 +210,3 @@ void loop() {
 
 
 
-## FAQs
-
-1. The firmware burning failed
-
-	A: Try plugging and unplugging the interface again. Before burning, make sure the indicator is not on and check if the corresponding COM port appears.
-
-2. The module makes no sound
-
-	A: Re-burn the firmware and check if the power connection is normal.
-
-3. No responses when hearing command words
-
-	A: Check if the firmware burning command words are consistent, adjust the firmware sensitivity, and then re-burn.
-
-4. Unable to communicate with the main control board
-
-	A: Check whether the corresponding pins are wired correctly, whether the connection is normal, and at the same time, check whether the firmware is paired correctly.
