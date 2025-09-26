@@ -1,17 +1,11 @@
-# KS6084 keyestudio DIY Electronic Building Blocks Xiaozhi English Voice Module
+# KS6084 KS0601 KS0602 Xiaozhi English Voice Module
 
 ![0](./media/0.png)
 
-[TOC]
-
-## Description
+## 1.Description
 
 With MUS516P6 as its main control chip, the Xiaozhi voice module is a low-cost, low-power, and small-sized offline voice recognition module that can be quickly applied to smart home devices and small household appliances, 86 boxes, toys, lamps, and so on.
-
-
-
-## Parameters
-
+## 2.Parameters
 - Operating voltage: 3.3V~5.5V
 - Load: LDO output 3.3V; The external load must not exceed150MA
 - Power supply and standby: 500MA/60MA
@@ -23,28 +17,17 @@ With MUS516P6 as its main control chip, the Xiaozhi voice module is a low-cost, 
 - Operating temperature: 0~80℃   
 - Dimensions: 47.73*23.93mm
 - Weight: 8.96g
-
-
-
-
-
-## Special Interface Description/Precautions
+## 3.Special Interface Description/Precautions
 
 - BO and B1 are the basic firmware burning points
 
 - The serial ports RXD and TXD can also be used as I2C
 
 - B2 and B3 are PWM ports
-
-
-
-## Schematic Diagram
+## 4.Schematic Diagram
 
   ![1](./media/1.png)
-
-
-
-## Product Instructions
+## 5.Product Instructions
 The following is the default firmware of the module. 
 
 **Voice Recognition Commands**  
@@ -122,9 +105,7 @@ The following is the default firmware of the module.
 | 8 | Current distance is |
 | 9 | Current time in Beijing is |
 
-
-
-## Wiring Diagram
+## 6.Wiring Diagram
 Here we take of the main  board arduino uno R4 as an example.
 The following table displays the GPIOs of the expansion board/development board and the module.
 
@@ -139,7 +120,7 @@ The following table displays the GPIOs of the expansion board/development board 
 
 ![29](./media/29.png)
 
-## Environment Configuration & Sample Code
+## 7.Environment Configuration & Sample Code
 
 **Arduino IDE (Windows)**
 
@@ -167,8 +148,6 @@ Select Development Board, the port number and the corresponding development boar
 
 ![30](./media/30.png)
 
-
-
 Then copy the following code to the editing box and upload it to the board.
 
 ```C
@@ -178,8 +157,6 @@ Then copy the following code to the editing box and upload it to the board.
 SoftwareSerial mySerial(4, 5); // pin 4 is RX，pin 5 is TX
 int pin = 8; //LED pin
  
-
-
 void setup() {
   Serial.begin(9600); // Hardware serial port (communicate with the computer)
   mySerial.begin(9600); // Software serial port (communicate with peripheral devices)
@@ -206,7 +183,7 @@ void loop() {
 }
 ```
 
-4. After burning program into the development board, say the wake-up word to trigger the module. Say “Turn on the light” and the orange LED light will light up; when you say “Turn off the light”, the orange LED light will go out.
+ After burning program into the development board, say the wake-up word to trigger the module. Say “Turn on the light” and the orange LED light will light up; when you say “Turn off the light”, the orange LED light will go out.
 
 
 
